@@ -1,0 +1,39 @@
+{
+	"name": "@cyph/chat-widget",
+	"version": "1.0.0",
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/cyph/chat-widget.js.git"
+	},
+	"author": "Cyph, Inc. <chat-widget@cyph.com> (https://github.com/cyph)",
+	"license": "Ms-RSL",
+	"bugs": {
+		"url": "https://github.com/cyph/chat-widget/issues"
+	},
+	"scripts": {
+		"build": "parcel build index.js",
+		"serve": "parcel index.html"
+	},
+	"prettier": {
+		"arrowParens": "avoid",
+		"bracketSpacing": false,
+		"endOfLine": "lf",
+		"htmlWhitespaceSensitivity": "css",
+		"jsxBracketSameLine": false,
+		"jsxSingleQuote": false,
+		"printWidth": 80,
+		"proseWrap": "always",
+		"quoteProps": "consistent",
+		"semi": true,
+		"singleQuote": true,
+		"tabWidth": 4,
+		"trailingComma": "none",
+		"useTabs": true
+	},
+	"devDependencies": {
+		"@cyph/prettier": "*",
+		"@cyph/pretty-quick": "*",
+		"material-design-lite": "^1",
+		"parcel-bundler": "^1"
+	}
+}
