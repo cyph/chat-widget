@@ -1,7 +1,7 @@
 import 'material-design-lite';
 import {chatBubbleIcon} from './assets/chat_bubble.svg';
 import {cyphLogo} from './assets/cyph-logo.png';
-import './assets/material.min.css';
+import {materialStylesheet} from './assets/material.min.css';
 
 const config = {
 	chatButtonText:
@@ -29,13 +29,26 @@ const config = {
 			?.getAttribute('content') || ''
 };
 
-const container = document.createElement('div');
-container.id = 'cyph-chat-widget';
+/* Set up container */
 
-container.style.position = 'fixed';
-container.style.bottom = '0';
-container.style.right = '0';
-container.style.zIndex = '10';
+const root = document.createElement('div');
+root.id = 'cyph-chat-widget';
+
+root.style.position = 'fixed';
+root.style.bottom = '0';
+root.style.right = '0';
+root.style.zIndex = '10';
+
+const shadowRoot = root.attachShadow({mode: 'open'});
+
+const container = document.createElement('div');
+container.style.fontFamily = 'Helvetica, Arial, sans-serif';
+
+const style = document.createElement('style');
+style.innerHTML = materialStylesheet;
+
+shadowRoot.appendChild(container);
+shadowRoot.appendChild(style);
 
 /* Button to open widget */
 
@@ -195,4 +208,16 @@ menu.appendChild(menuPoweredBy);
 
 container.appendChild(button);
 container.appendChild(menu);
-document.body.appendChild(container);
+
+for (const elem of [
+	button,
+	menuButtonContent,
+	menuButton,
+	menuDescription,
+	menuTitle,
+	menu
+]) {
+	componentHandler.upgradeElement(elem);
+}
+
+document.body.appendChild(root);
