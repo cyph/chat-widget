@@ -1,3 +1,4 @@
+import '@webcomponents/shadydom';
 import 'material-design-lite';
 import {chatBubbleIcon} from './assets/chat_bubble.svg';
 import {cyphLogo} from './assets/cyph-logo.png';

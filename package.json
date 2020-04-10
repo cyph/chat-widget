@@ -35,5 +35,8 @@
 		"@cyph/pretty-quick": "*",
 		"material-design-lite": "https://github.com/buu700/material-design-lite-tmp",
 		"parcel-bundler": "^1"
+	},
+	"dependencies": {
+		"@webcomponents/shadydom": "^1.7.3"
 	}
 }
