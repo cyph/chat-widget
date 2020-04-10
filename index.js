@@ -113,6 +113,7 @@ const menuDescription = document.createElement('li');
 for (const descriptionParagraph of config.description.split('\n')) {
 	const p = document.createElement('p');
 	p.textContent = descriptionParagraph;
+	p.style.pointerEvents = 'none';
 	menuDescription.appendChild(p);
 }
 
