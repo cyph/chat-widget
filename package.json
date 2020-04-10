@@ -33,7 +33,7 @@
 	"devDependencies": {
 		"@cyph/prettier": "*",
 		"@cyph/pretty-quick": "*",
-		"material-design-lite": "^1",
+		"material-design-lite": "https://github.com/buu700/material-design-lite-tmp",
 		"parcel-bundler": "^1"
 	}
 }
