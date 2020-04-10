@@ -111,7 +111,12 @@ menuTitle.style.fontWeight = 'bold';
 
 const menuDescription = document.createElement('li');
 
-for (const descriptionParagraph of config.description.split('\n')) {
+for (let descriptionParagraph of config.description.split('\n')) {
+	descriptionParagraph = descriptionParagraph.trim();
+	if (!descriptionParagraph) {
+		continue;
+	}
+
 	const p = document.createElement('p');
 	p.textContent = descriptionParagraph;
 	p.style.pointerEvents = 'none';
