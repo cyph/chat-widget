@@ -38,7 +38,7 @@ root.id = 'cyph-chat-widget';
 root.style.position = 'fixed';
 root.style.bottom = '0';
 root.style.right = '0';
-root.style.zIndex = '10';
+root.style.zIndex = '99999';
 
 const shadowRoot = root.attachShadow({mode: 'open'});
 
